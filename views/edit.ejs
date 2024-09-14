@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Operation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="w-full h-screen bg-zinc-900 p-10 text-white">
+          <a  class="text-blue-500" href="/read">See All User</a>
+        <h1 class="text-3xl text-white mb-3 tracking-tighter">Update User</h1>
+        <form action="/update/<%=user._id%>" method="post">
+         <div>
+            <input class="px-5 py-3 rounded-md outline-none bg-transparent border-2 border-zinc-500"  placeholder="Enter Your name" value="<%=user.name%>" type="text" name="name" id="">
+            <input  class="px-5 py-3 rounded-md outline-none bg-transparent border-2 border-zinc-500" placeholder="Enter Your Email"  value="<%=user.email%>" type="text" name="email" id="">
+            <input  class="px-5 py-3 rounded-md outline-none bg-transparent border-2 border-zinc-500"placeholder="Enter Image Url" value="<%=user.image%>" type="text" name="image" id="">
+            <input class="px-5 py-3 bg-yellow-500 rounded-md text-white "type="submit"value="Update User">
+         </div>
+        </form>
+    </div>
+</body>
+</html>
